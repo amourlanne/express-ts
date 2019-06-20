@@ -57,8 +57,11 @@
     "nodemon": "^1.19.1"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.ts --extensions '.ts'",
-    "lint": "eslint --fix src tests",
-    "test": "jest"
+    "start": "babel-node src/index.ts --extensions .js,.jsx,.ts,.tsx",
+    "start:dev": "nodemon --ext js,jsx,ts,tsx --exec \"yarn lint && yarn start\"",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
+    "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx ./ --fix",
+    "test": "jest",
+    "build": "babel src -d dist"
   }
 }
