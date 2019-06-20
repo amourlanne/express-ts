@@ -1,10 +1,10 @@
 import request from 'supertest';
-import app from '../src';
+import app from '../../src/server';
 
 describe('app', () => {
-  it('should return a successful response for GET /', done => {
+  it('should get message for GET /api', done => {
     return request(app)
-      .get('/')
+      .get('/api')
       .expect(200, done);
   });
 });
