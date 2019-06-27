@@ -1,9 +1,9 @@
 import request from 'supertest';
-import app from '../src/server';
+import server from '../src';
 
 describe('app', () => {
   it('should redirect to /api for GET /', done => {
-    return request(app)
+    return request(server)
       .get('/')
       .expect('Location', '/api')
       .expect(302, done);

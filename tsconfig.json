@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "lib" : [
+    "target": "es5",
+    "lib": [
       "dom",
-      "es6"
+      "dom.iterable",
+      "esnext"
     ],
     "pretty": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "allowJs": true,
-    "noEmit": true,
     "strict": true,
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -24,6 +24,7 @@
     "tests"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "build"
   ]
 }
