@@ -87,7 +87,6 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./src ./tests",
     "build": "webpack --config config/webpack/production.config.js",
     "start": "webpack --config config/webpack/development.config.js",
-    "serve": "node ./build/main.bundle.js",
     "test": "jest ./tests"
   }
 }
